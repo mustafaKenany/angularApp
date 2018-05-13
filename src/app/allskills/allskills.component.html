@@ -1,0 +1,27 @@
+<div class="">
+  <table class="">
+    <thead>
+      <tr>
+        <th>الاسم الاول</th>
+        <th>أسم الاب</th>
+        <th>الهاتف</th>
+        <th>المهارة</th>
+        <th>المحافظة</th>
+        <th>المدينة</th>
+        <th>ملاحضات</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of itemArray">
+        <td>{{item.dbFirstName}}</td>
+        <td>{{item.dbLastName}}</td>
+        <td>{{item.dbtelephone}}</td>
+        <td>{{item.dbSkill}}</td>
+        <td>{{item.dbProvince}}</td>
+        <td>{{item.dbCity}}</td>
+        <td>{{item.dbNotes}}</td>
+        <td><button class="uk-button uk-button-primary" name="allskillview" routerLink="/viewskill">تفاصيل</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

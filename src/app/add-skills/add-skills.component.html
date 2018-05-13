@@ -1,0 +1,36 @@
+<div class="uk-card uk-card-default uk-card-body uk-text-right">
+  <h3 class="uk-card-title">اضف مهاراتك</h3>
+  <fieldset class="uk-fieldset">
+    <div class="uk-margin">
+      <input class="uk-input" type="text" placeholder="أسمك الاول" name="firstName" [(ngModel)]="personalinformation.firstName">
+    </div>
+    <div class="uk-margin">
+      <input class="uk-input" type="text" placeholder="أسم الاب" name="lastName" [(ngModel)]="personalinformation.lastName">
+    </div>
+    <div class="uk-margin">
+      <input class="uk-input" type="tel" placeholder="رقم الهاتف" name="telphone" [(ngModel)]="personalinformation.telphone">
+    </div>
+    <div class="uk-margin">
+      <input class="uk-input" type="tel" placeholder="المهارة" name="skill" [(ngModel)]="personalinformation.skill">
+    </div>
+    <div class="uk-margin">
+      <input class="uk-input" type="text" placeholder="المحافظة" name="province" [(ngModel)]="personalinformation.province">
+    </div>
+    <div class="uk-margin">
+      <input class="uk-input" type="text" placeholder="المدينة" name="city" [(ngModel)]="personalinformation.city">
+    </div>
+    <div class="uk-margin">
+      <input class="uk-input" type="text" placeholder="سعر" name="price" [(ngModel)]="personalinformation.price">
+    </div>
+    <div class="uk-margin">
+      <input class="uk-input" type="text" placeholder="صور عن عملك" name="pictureWork" [(ngModel)]="personalinformation.pictureWork">
+    </div>
+    <div class="uk-margin">
+      <textarea class="uk-textarea" rows="5" placeholder="ملاحضات تحب تذكرها" name="notes" [(ngModel)]="personalinformation.notes"></textarea>
+    </div>
+    <div class="uk-margin">
+      <button class="uk-button uk-button-primary" name="save" (click)="insertSkill()">حفظ</button>
+    </div>
+
+  </fieldset>
+</div>

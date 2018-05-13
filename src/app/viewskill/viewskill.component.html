@@ -1,0 +1,15 @@
+<div class="uk-child-width-1-2@m uk-padding" uk-grid>
+  <div *ngFor="let item of itemArray">
+    <div class="uk-card uk-card-default">
+      <div class="uk-card-media-top">
+        <img src="../../assets/img/skills.jpg" alt="">
+      </div>
+      <div class="uk-card-body">
+        <h3 class="uk-card-small">عنوان الحرفة {{item.dbSkill}}</h3>
+        <p>السعر{{item.dbPrice}}</p>
+        <p>{{item.dbNotes}}</p>
+        <button class="uk-button uk-button-secondary" routerLink="/allskills">رجوع</button>
+      </div>
+    </div>
+  </div>
+</div>

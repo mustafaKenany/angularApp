@@ -1,0 +1,13 @@
+table
+{
+    width: 95%;
+    border: 2px solid;
+    margin: 10px auto;
+}
+td,th
+{
+    width: 8%;
+    border:1px solid red;
+    text-align: center;
+    padding: 5px;
+}

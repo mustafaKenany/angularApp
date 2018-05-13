@@ -1,0 +1,66 @@
+
+<div class="uk-child-width-1-2@m uk-padding" uk-grid>
+  <div *ngFor="let item of itemArray">
+    <div class="uk-card uk-card-default">
+      <div class="uk-card-media-top">
+        <img src="../../assets/img/skills.jpg" alt="">
+      </div>
+      <div class="uk-card-body">
+        <h3 class="uk-card-small">عنوان الحرفة {{item.dbSkill}}</h3>
+        <p>السعر{{item.dbPrice}}</p>
+        <p>{{item.dbNotes}}</p>
+        <button class="uk-button uk-button-primary" uk-toggle="target: #modal-example" (click)="EditFunction(item.$key)">تحديث</button>
+        <button class="uk-button uk-button-danger" (click)="myskillOnDelete(item.$key)">حذف</button>
+      </div>
+    </div>
+
+    <!-- this form is displayed when user click on Edit btn -->
+    <!-- This is the modal -->
+    <div id="modal-example" uk-modal>
+      <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title">تحديث البيانات</h2>
+        <fieldset class="uk-fieldset">
+          <div class="uk-margin">
+            <label class="label">الاسم الاول</label>
+            <input class="uk-input" type="text" [(ngModel)]="personalinformation.firstName" placeholder="أسمك الاول" name="firstName">
+          </div>
+          <div class="uk-margin">
+            <label class="label">الاسم الاب</label>
+            <input class="uk-input" type="text" [(ngModel)]="personalinformation.lastName" placeholder="أسم الاب" name="lastName">
+          </div>
+          <div class="uk-margin">
+            <label class="label">رقم الهاتف</label>
+            <input class="uk-input" type="tel" [(ngModel)]="personalinformation.telphone" placeholder="رقم الهاتف" name="telphone">
+          </div>
+          <div class="uk-margin">
+            <label class="label">المهارة</label>
+            <input class="uk-input" type="text" [(ngModel)]="personalinformation.skill" placeholder="المهارة" name="skill">
+          </div>
+          <div class="uk-margin">
+            <label class="label">المحافظة</label>
+            <input class="uk-input" type="text" [(ngModel)]="personalinformation.province" placeholder="المحافظة" name="province">
+          </div>
+          <div class="uk-margin">
+            <label class="label">المدينة</label>
+            <input class="uk-input" type="text" [(ngModel)]="personalinformation.city" placeholder="المدينة" name="city">
+          </div>
+          <div class="uk-margin">
+              <label class="label">سعر</label>
+            <input class="uk-input" type="text" [(ngModel)]="personalinformation.price" placeholder="سعر" name="price">
+          </div>
+
+          <div class="uk-margin">
+              <label class="label">ملاحضات</label>
+            <textarea class="uk-textarea" rows="5" [(ngModel)]="personalinformation.notes" placeholder="ملاحضات تحب تذكرها" name="notes"></textarea>
+          </div>
+        </fieldset>
+        <p class="uk-text-right">
+          <button class="uk-button uk-button-default uk-modal-close" type="button">الغاء</button>
+          <button class="uk-button uk-button-primary" type="button" (click)="modificationFunction(item.$key)">تحديث</button>
+        </p>
+      </div>
+    </div>
+
+
+  </div>
+</div>

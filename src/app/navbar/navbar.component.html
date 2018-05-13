@@ -1,0 +1,43 @@
+<nav class="uk-navbar-container" uk-navbar>
+
+  <div class="uk-navbar-right">
+
+    <ul class="uk-navbar-nav">
+      <li class="uk-active">
+        <a href="/">الرئيسية</a>
+      </li>
+      <li *ngIf="!isLoggedIn">
+        <a routerLink="/registration">التسجيل في الموقع</a>
+      </li>
+      <li *ngIf="!isLoggedIn">
+        <a routerLink="/login" >تسجيل الدخول</a>
+      </li>
+      <li>
+        <a routerLink="/allskills">المهارات</a>
+      </li>
+      <li>
+        <a routerLink="/myskills">مهاراتي</a>
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="uk-navbar-left" *ngIf="isLoggedIn" >
+    <ul class="uk-navbar-nav uk-navbar-right">
+      <li>
+        <a href="#">حسابي الشخصي</a>
+        <div class="uk-navbar-dropdown">
+          <ul class="uk-nav uk-navbar-dropdown-nav">
+            <li class="uk-active">
+              <a routerLink="/addskill">أضافة مهاره جديدة</a>
+            </li>
+            <li>
+              <a (click)="logout()" href="">تسجيل الخروج</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</nav>
